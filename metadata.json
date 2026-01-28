@@ -1,0 +1,5 @@
+{
+  "name": "DES Algorithm Visualizer",
+  "description": "An interactive, step-by-step educational tool visualizing the Data Encryption Standard (DES) algorithm with animations and detailed explanations.",
+  "requestFramePermissions": []
+}
