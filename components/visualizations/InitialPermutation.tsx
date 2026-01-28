@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { BitGrid } from '../ui/BitGrid';
 import { IP_TABLE } from '../../constants';
@@ -12,22 +12,6 @@ interface IPProps {
 export const InitialPermutation: React.FC<IPProps> = ({ input, output }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const [svgDimensions, setSvgDimensions] = useState({ width: 0, height: 0 });
-
-  // Update SVG dimensions on resize
-  useEffect(() => {
-    const updateSize = () => {
-      if (containerRef.current) {
-        setSvgDimensions({
-          width: containerRef.current.offsetWidth,
-          height: containerRef.current.offsetHeight
-        });
-      }
-    };
-    updateSize();
-    window.addEventListener('resize', updateSize);
-    return () => window.removeEventListener('resize', updateSize);
-  }, []);
 
   // Mapping logic
   // IP_TABLE[i] = p means Output[i] comes from Input[p-1]

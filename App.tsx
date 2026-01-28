@@ -6,7 +6,7 @@ import { KeySchedule } from './components/visualizations/KeySchedule';
 import { RoundFunction } from './components/visualizations/RoundFunction';
 import { BitGrid } from './components/ui/BitGrid';
 import { Button } from './components/ui/Button';
-import { Play, SkipForward, SkipBack, RotateCcw, Lock, ChevronRight, Menu } from 'lucide-react';
+import { Play, SkipForward, SkipBack, RotateCcw, Lock } from 'lucide-react';
 
 const DEFAULT_PLAIN = "123456ABCD132536";
 const DEFAULT_KEY = "AABB09182736CCDD";

@@ -14,8 +14,7 @@ import {
   Microscope,
   BoxSelect,
   Play,
-  Pause,
-  Info
+  Pause
 } from 'lucide-react';
 
 interface KeyScheduleProps {

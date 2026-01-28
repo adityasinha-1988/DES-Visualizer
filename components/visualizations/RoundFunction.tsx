@@ -15,8 +15,6 @@ import {
   Microscope, 
   Info,
   ChevronDown,
-  BoxSelect,
-  Binary,
   Layers
 } from 'lucide-react';
 
