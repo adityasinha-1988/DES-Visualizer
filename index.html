@@ -30,11 +30,12 @@
       body {
         background-color: #0f172a;
         color: #e2e8f0;
+        overflow: hidden; /* Prevent body scroll, handle in app */
       }
       /* Custom scrollbar */
       ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
+        width: 6px;
+        height: 6px;
       }
       ::-webkit-scrollbar-track {
         background: #1e293b; 
@@ -50,16 +51,21 @@
   <script type="importmap">
 {
   "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
     "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
     "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
+    "vite": "https://esm.sh/vite@^7.3.1",
     "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
-    "framer-motion": "https://esm.sh/framer-motion@^12.29.2"
+    "framer-motion": "https://esm.sh/framer-motion@^12.29.2",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
   }
 }
 </script>
+<link rel="stylesheet" href="/index.css">
 </head>
   <body>
-    <div id="root"></div>
-  </body>
+    <div id="root" class="h-screen w-screen overflow-hidden"></div>
+    <script type="module" src="./index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
 </html>
